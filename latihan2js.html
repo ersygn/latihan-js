@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program Latihan2 Javascript</title>
+</head>
+<body>
+<script language="Javascript">
+	function kalkulator(pilihan){
+    var a1=document.getElementById('angka1').value;
+    var a2=document.getElementById('angka2').value;
+    a1 = parseInt(a1)
+    a2 = parseInt(a2)
+    if (pilihan=='+'){
+        document.getElementById('hasil').value = a1 + a2;
+    }
+    else if(pilihan == '-'){
+        document.getElementById('hasil').value = a1 - a2;
+    }
+    else if(pilihan == 'x'){
+        document.getElementById('hasil').value = a1 * a2;
+    }
+    else {
+        document.getElementById('hasil').value = a1 / a2;
+    }
+}
+</script>
+
+<h1>Kalkulator JS</h1>
+	<p>Input Angka Awal <input type="text" name="a1" type="text" value="" id="angka1" size="20"></p>
+	<p>Input Angka Akhir <input type="text" name="a2" type="text" value="" id="angka2" size="20"></p>
+	<p>Hasil <input type="text" name="hasil" value="0" id="hasil" size="20"></p>
+	<input type="button" value="+" onclick=kalkulator(this.value)>
+	<input type="button" value="-" onclick=kalkulator(this.value)>
+	<input type="button" value="x" onclick=kalkulator(this.value)>
+	<input type="button" value="/" onclick=kalkulator(this.value)>
+</body>
+</html>
